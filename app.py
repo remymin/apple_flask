@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import os
 
 app = Flask(__name__)
 
@@ -7,6 +6,13 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/products")  # ← 이 부분 추가!
+def products():
+    return render_template("products.html")
+
+@app.route("/english")
+def english():
+    return render_template("english.html")
+
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host="0.0.0.0", port=10000)

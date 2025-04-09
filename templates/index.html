@@ -2,10 +2,88 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>My Flask Site</title>
+  <title>사과 랜딩페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>안녕하세요! 🍎 첫 Flask 배포 페이지입니다!</h1>
-  <p>Render.com 배포 실습 중입니다.</p>
+<body class="bg-red-50 text-gray-800 font-sans">
+
+  <!-- 네비게이션 -->
+  <nav class="bg-rose-600 text-white py-4 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🍎 Apple Landing</h1>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="/" class="hover:underline">홈</a>
+        <a href="/products" class="hover:underline">제품소개</a>
+        <a href="/english" class="hover:underline">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 메인 (Hero Section) -->
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- 왼쪽 텍스트 -->
+      <div class="text-center md:text-left">
+        <h2 class="text-4xl font-bold text-red-700 mb-4">신선한 사과를 소개합니다!</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          경북 영천의 고품질 후지 사과입니다.<br>
+          아삭한 식감과 깊은 단맛으로 고객 만족도가 높은 제품입니다.
+        </p>
+        <a href="#" class="inline-block mt-6 bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md text-lg transition">
+          지금 구매하기
+        </a>
+      </div>
+
+      <!-- 오른쪽 이미지 -->
+      <div class="flex justify-center">
+        <img src="{{ url_for('static', filename='apple.png') }}" alt="사과 이미지" class="rounded-xl shadow-lg w-[300px] h-[300px] object-cover">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 특징 섹션 -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-bold text-center text-red-700 mb-10">🍏 사과 제품의 특별한 3가지 포인트</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <!-- Feature 1 -->
+        <div class="bg-red-100 rounded-xl p-6 shadow hover:shadow-md transition">
+          <div class="text-4xl mb-4">🌱</div>
+          <h4 class="text-lg font-semibold text-red-800 mb-2">무농약 재배</h4>
+          <p class="text-gray-700 text-sm">
+            친환경 인증을 받은 농장에서 화학 비료 없이 자연 순환 방식으로 재배하였습니다.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-red-100 rounded-xl p-6 shadow hover:shadow-md transition">
+          <div class="text-4xl mb-4">🍯</div>
+          <h4 class="text-lg font-semibold text-red-800 mb-2">당도 15브릭스 이상</h4>
+          <p class="text-gray-700 text-sm">
+            아삭한 식감과 깊은 단맛! 후지 품종 중 상위 10% 사과만 엄선합니다.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-red-100 rounded-xl p-6 shadow hover:shadow-md transition">
+          <div class="text-4xl mb-4">📦</div>
+          <h4 class="text-lg font-semibold text-red-800 mb-2">산지 직송</h4>
+          <p class="text-gray-700 text-sm">
+            수확 후 24시간 이내 산지에서 직배송! 신선도를 최우선으로 생각합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-12">
+    &copy; 2025 Apple Landing. All rights reserved.
+  </footer>
+
 </body>
 </html>

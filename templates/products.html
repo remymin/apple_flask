@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제품 소개 - 사과</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-50 text-gray-800 font-sans">
+
+  <!-- 네비게이션 -->
+  <nav class="bg-rose-600 text-white py-4 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🍎 Apple Landing</h1>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="/" class="hover:underline">홈</a>
+        <a href="/products" class="hover:underline font-bold underline">제품소개</a>
+        <a href="/english" class="hover:underline">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 제품 소개 -->
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-red-700 text-center mb-12">🍎 판매 중인 사과 제품</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- 카드 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md transition p-6 text-center">
+        <img src="{{ url_for('static', filename='apple.png') }}" alt="사과 이미지" class="mx-auto mb-4 rounded-lg w-40 h-40 object-cover">
+        <h3 class="text-lg font-semibold text-red-800 mb-2">후지 사과 5kg</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          20~24과 구성 / 경북 영천산<br>무농약 재배, 산지직송
+        </p>
+        <span class="block text-red-600 font-bold text-lg mb-2">₩19,800</span>
+        <a href="#" class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded text-sm">구매하기</a>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md transition p-6 text-center">
+        <img src="{{ url_for('static', filename='apple.png') }}" alt="사과 이미지" class="mx-auto mb-4 rounded-lg w-40 h-40 object-cover">
+        <h3 class="text-lg font-semibold text-red-800 mb-2">홍옥 사과 3kg</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          12~15과 구성 / 아삭하고 새콤한 맛<br>사과즙/잼 용도 추천
+        </p>
+        <span class="block text-red-600 font-bold text-lg mb-2">₩13,500</span>
+        <a href="#" class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded text-sm">구매하기</a>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md transition p-6 text-center">
+        <img src="{{ url_for('static', filename='apple.png') }}" alt="사과 이미지" class="mx-auto mb-4 rounded-lg w-40 h-40 object-cover">
+        <h3 class="text-lg font-semibold text-red-800 mb-2">혼합 사과 세트</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          후지 + 홍옥 혼합 4kg<br>선물용 박스 패키지 포함
+        </p>
+        <span class="block text-red-600 font-bold text-lg mb-2">₩17,900</span>
+        <a href="#" class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded text-sm">구매하기</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-12">
+    &copy; 2025 Apple Landing. All rights reserved.
+  </footer>
+
+</body>
+</html>
